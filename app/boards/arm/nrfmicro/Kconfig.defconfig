@@ -30,6 +30,9 @@ config ZMK_USB
 config PINMUX
 	default y
 
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+	default n
+
 if BOARD_NRFMICRO_13
 
 config BOARD_NRFMICRO_CHARGER

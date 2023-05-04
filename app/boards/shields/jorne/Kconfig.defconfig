@@ -5,7 +5,7 @@ config ZMK_KEYBOARD_NAME
 	default "Jorne Left"
 
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
-	default y
+    default n
 
 endif
 
@@ -14,14 +14,20 @@ if SHIELD_JORNE_RIGHT
 
 config ZMK_KEYBOARD_NAME
 	default "Jorne Right"
-	
+
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+	default y
+
 endif
 
 if SHIELD_JORNE_LEFT || SHIELD_JORNE_RIGHT
 
 config ZMK_SPLIT
 	default y
- 
+
+config ZMK_SPLIT_BLE
+    default y
+
 if ZMK_DISPLAY
 
 config I2C
